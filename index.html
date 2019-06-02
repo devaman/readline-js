@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ReadLine</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-99907893-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-99907893-3');
+</script>
+
+  <link rel="shortcut icon" href="https://amitchambial.netlify.com/assets/img/favicon.png" type="image/x-icon">
+   <!-- Twitter -->
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:creator" content="Amit Chambial">
+   <meta name="twitter:site" content="https://devaman.github.io/readline-js/">
+   <meta name="twitter:title" content="readline-js">
+   <meta name="twitter:description" content="A position indicator at the top of the page to visually display how far you have scrolled on a webpage.">
+   <meta name="twitter:image:src" content="https://amitchambial.netlify.com/assets/img/favicon.png">
+   <meta name="twitter:image:width" content="312">
+   <meta name="twitter:image:height" content="141">
+     <!-- Facebook -->
+   <meta property="og:url" content="https://devaman.github.io/readline-js/" />
+   <meta property="og:type" content="article" />
+   <link href="https://fonts.googleapis.com/css?family=Advent+Pro" rel="stylesheet">
+   <meta property="og:title" content="readline-js" />
+   <meta property="og:description" content="A position indicator at the top of the page to visually display how far you have scrolled on a webpage." />
+   <meta property="og:image" content="https://amitchambial.netlify.com/assets/img/favicon.png"
+   />
+ 
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/css/mdb.min.css" rel="stylesheet">
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/js/mdb.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://unpkg.com/readline-js@0.0.9/lib/readline-js.js"></script>
+  <style>
+    footer {
+      width: 100vw;
+      height: 100px;
+      display: flex;
+      font-family: 'Advent Pro';
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    footer .social {
+      font-size: 20px;
+    }
+
+    footer .social i {
+      padding: 2px 8px;
+    }
+
+    #content {
+      padding: 2px 100px;
+    }
+
+    @media(max-width:600px) {
+      #content {
+        padding: 2px 16px;
+      }
+
+    }
+  </style>
+</head>
+
+<body style="margin:0px;">
+  <!--Navbar -->
+  <nav class="mb-1 navbar navbar-expand-lg navbar-dark red lighten-1">
+    <a class="navbar-brand" href="#">readline-js</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
+      aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="docs.html">Docs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="donate.html">Donate</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto nav-flex-icons">
+        <li class="nav-item avatar">
+          <a class="nav-link p-0" href="#">
+            <img
+              src="https://avatars1.githubusercontent.com/u/17355480?s=400&u=3bec8ccf4393ce1393d108d4e2fdb80987fa3cd1&v=4"
+              class="rounded-circle z-depth-0" alt="avatar image" height="35">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!--/.Navbar -->
+  <div>
+    <div style="text-align:center;font-size:40px; font-weight:500;">
+        Demo
+        <hr  >
+        <a href="https://www.producthunt.com/posts/readlinejs?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-readlinejs" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=150612&theme=dark" alt="ReadlineJs - A read position indicator at the top of the page . | Product Hunt Embed" style="width: 250px; height: 54px;" width="250px" height="54px" /></a>
+        <a href="https://www.producthunt.com/posts/readlinejs?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-readlinejs" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=150612&theme=dark&period=daily" alt="ReadlineJs - A read position indicator at the top of the page . | Product Hunt Embed" style="width: 250px; height: 54px;" width="250px" height="54px" /></a>
+    </div>
+    <!-- Section: Blog v.4 -->
+    <section class="my-5" id="target">
+
+
+      <!-- Grid column -->
+      <div class="col-md-12">
+
+        <!-- Card -->
+        <div class="card card-cascade wider reverse">
+
+          <!-- Card image -->
+          <div class="view view-cascade overlay">
+            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Slides/img%20(142).jpg"
+              alt="Sample image">
+            <a href="#!">
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+
+          <!-- Card content -->
+          <div class="card-body card-body-cascade text-center">
+
+            <!-- Title -->
+            <h2 class="font-weight-bold"><a>ReadLine</a></h2>
+            <!-- Data -->
+            <p>Written by <a><strong>Amit Chambial</strong></a></p>
+            <!-- Social shares -->
+
+
+          </div>
+          <!-- Card content -->
+
+        </div>
+        <!-- Card -->
+
+        <!-- Excerpt -->
+        <div class="mt-5" id="content">
+
+          <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui praesentium voluptatum deleniti atque
+            corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique
+            sunt in culpa nemo enim ipsam voluptatem quia voluptas sit qui officia deserunt mollitia animi, id
+            est laborum et dolorum fuga quidem rerum facilis est distinctio.
+          </p>
+          <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui praesentium voluptatum deleniti atque
+            corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique
+            sunt in culpa nemo enim ipsam voluptatem quia voluptas sit qui officia deserunt mollitia animi, id
+            est laborum et dolorum fuga quidem rerum facilis est distinctio.
+          </p>
+          <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui praesentium voluptatum deleniti atque
+            corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique
+            sunt in culpa nemo enim ipsam voluptatem quia voluptas sit qui officia deserunt mollitia animi, id
+            est laborum et dolorum fuga quidem rerum facilis est distinctio.
+          </p>
+          <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui praesentium voluptatum deleniti atque
+            corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique
+            sunt in culpa nemo enim ipsam voluptatem quia voluptas sit qui officia deserunt mollitia animi, id
+            est laborum et dolorum fuga quidem rerum facilis est distinctio.
+          </p>
+          <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui praesentium voluptatum deleniti atque
+            corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique
+            sunt in culpa nemo enim ipsam voluptatem quia voluptas sit qui officia deserunt mollitia animi, id
+            est laborum et dolorum fuga quidem rerum facilis est distinctio.
+          </p>
+          <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui praesentium voluptatum deleniti atque
+            corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique
+            sunt in culpa nemo enim ipsam voluptatem quia voluptas sit qui officia deserunt mollitia animi, id
+            est laborum et dolorum fuga quidem rerum facilis est distinctio.
+          </p>
+          <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui praesentium voluptatum deleniti atque
+            corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique
+            sunt in culpa nemo enim ipsam voluptatem quia voluptas sit qui officia deserunt mollitia animi, id
+            est laborum et dolorum fuga quidem rerum facilis est distinctio.
+          </p>
+          <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui praesentium voluptatum deleniti atque
+            corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique
+            sunt in culpa nemo enim ipsam voluptatem quia voluptas sit qui officia deserunt mollitia animi, id
+            est laborum et dolorum fuga quidem rerum facilis est distinctio.
+          </p>
+          <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+            maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Quis autem vel
+            eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur. Temporibus
+            autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates
+            repudiandae sint et molestiae non recusandae itaque earum rerum.</p>
+
+        </div>
+
+      </div>
+      <!-- Grid column -->
+
+
+      <hr class="mb-5 mt-4">
+
+    </section>
+    <!-- Section: Blog v.4 -->
+  </div>
+  <footer>
+    <label> © 2019 Amit Chambial</label>
+    <div class="social">
+      <a href="https://twitter.com/amit_chambial"> <i class="devicon-twitter-plain colored"></i></a>
+      <a href="https://www.facebook.com/amitchambial5"> <i class="devicon-facebook-plain colored"></i></a>
+      <a href="https://github.com/devaman"> <i class="devicon-github-plain colored"></i></a>
+    </div>
+    </div>
+  </footer>
+
+  <script>
+    ReadLine({
+      id: "target",
+      height: "3px",
+      color: "red"
+    });
+  </script>
+</body>
+
+</html>
