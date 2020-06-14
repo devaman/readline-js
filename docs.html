@@ -53,7 +53,7 @@
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/js/mdb.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://unpkg.com/readline-js@0.0.9/lib/readline-js.js"></script>
+  <script src="https://unpkg.com/readline-js@1.0.1/lib/readline-js.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     <style>
         * {
@@ -158,6 +158,9 @@
                         <code>
 &lt;script src="https://unpkg.com/readline-js/lib/readline-js.js"&gt;&lt;/script&gt;
                         </code>
+or
+
+<code>npm install readline-js</code>
                     </pre>
             <hr class="mb-3">
 
@@ -169,7 +172,64 @@
 
 
         <h2 id="list-item-2">
-            # Initializing ReadLine
+            # Initializing ReadLine (for v1.0 latest)
+        </h2>
+        <div class="docs-code">
+Calling ReadLine in body.
+
+            <pre class="prettyprint js">
+&lt;script&gt;
+let readLine = new ReadLine({
+    showPercentage:true,
+    id:"target",
+    height: "4px",
+    color: "#00b8e6"
+});
+//destroying the readline-js
+readLine.destroy();
+&lt;/script&gt;
+
+</pre>
+You can call this function in head also.
+<pre class="prettyprint">
+&lt;script&gt;
+    window.onload=function(){
+        new ReadLine({
+        id: "target",
+        height: "3px",
+        color: "red"
+        });
+    };
+&lt;/script&gt;</pre>
+In React js 
+<pre class="prettyprint lang-js">
+    import Readline from 'readline-js';
+    ...
+    useEffect(() => {
+    
+       let readline = new Readline({
+         height: "3px",
+         color: "red"
+       })
+       return ()=>{
+         readline.destroy();
+       }
+   })
+</pre>
+            <hr class="mb-3">
+
+            <div class="content">
+                <b style="display:inline-block;">id(optional): </b> id of the targeted content / Default whole
+                body<br />
+                <b style="display:inline-block;">showPercentage(optional): </b> show percentage of content covered (slow in mobile)<br />
+                <b style="display:inline-block;">height(optional): </b> height of line / Default 6px<br />
+                <b style="display:inline-block;">color(optional): </b> color of line (rgb/rbga) / Default blue<br />
+                <b style="display:inline-block;">.destroy(): </b> Use this method on the readline object created to destroy or remove it <br />
+
+            </div>
+        </div>
+        <h2 id="list-item-2">
+            # Initializing ReadLine (For Old version v0.1)
         </h2>
         <div class="docs-code">
 Calling ReadLine in body.
@@ -210,6 +270,11 @@ You can call this function in head also.
 
 
     </div>
+
+
+
+    </div>
+    
     <footer>
         <label> © 2019 Amit Chambial</label>
         <div class="social">
@@ -221,7 +286,7 @@ You can call this function in head also.
     </footer>
 
     <script>
-        ReadLine({
+       let readline = new ReadLine({
             id: "target",
             height: "3px",
             color: "red"

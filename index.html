@@ -53,7 +53,7 @@
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/js/mdb.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://unpkg.com/readline-js@0.0.9/lib/readline-js.js"></script>
+  <script src="https://unpkg.com/readline-js@1.0.1/lib/readline-js.js"></script>
   <style>
     footer {
       width: 100vw;
@@ -232,11 +232,11 @@
   </footer>
 
   <script>
-    ReadLine({
-      id: "target",
-      height: "3px",
-      color: "red"
-    });
+   let readline = new ReadLine({
+            id: "target",
+            height: "3px",
+            color: "red"
+        });
   </script>
 </body>
 
